@@ -1,0 +1,51 @@
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+ch1=int(input("what do you choose? Type 0 for rock, 1 for paper, 2 for scissors\n"))
+if ch1>=3:
+    print("Invalid number. You lose😞")
+else:
+    if ch1==0:
+        print(rock)
+    elif ch1==1:
+        print(paper)
+    else:
+        print(scissors)
+comp_ch=random.randint(0,2)
+print("Computer choose:")
+if comp_ch==0:
+    print(rock)
+elif comp_ch==1:
+    print(paper)
+else:
+    print(scissors)
+if ch1==comp_ch:
+    print("it's a draw😐")
+elif (ch1 == 0 and comp_ch == 2) or (ch1 == 1 and comp_ch == 0) or (ch1 == 2 and comp_ch == 1):
+    print("you win!🥳")
+else:
+    print("You lose😞")
